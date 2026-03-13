@@ -1,14 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    serverComponentsExternalPackages: ['typeorm', 'better-sqlite3']
-  },
-  webpack: (config, { isServer }) => {
-    if (isServer) {
-      config.externals = [...(config.externals || []), 'better-sqlite3'];
-    }
-    return config;
-  }
+  output: "standalone",
+  serverExternalPackages: ["typeorm", "better-sqlite3"],
+  experimental: {},
 };
 
 export default nextConfig;

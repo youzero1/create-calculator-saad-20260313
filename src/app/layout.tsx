@@ -1,9 +1,9 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Calculator App',
-  description: 'A simple calculator built with Next.js',
+  title: "Alex Carter | Full Stack Developer",
+  description: "Personal portfolio of Alex Carter, a passionate full stack developer building modern web experiences.",
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="noise">{children}</body>
     </html>
   );
 }
