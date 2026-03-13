@@ -1,0 +1,208 @@
+.calculatorCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 24px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.expression {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  min-height: 20px;
+  margin-bottom: 8px;
+  word-break: break-all;
+  text-align: right;
+}
+
+.result {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 300;
+  word-break: break-all;
+  text-align: right;
+  line-height: 1.1;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  border: none;
+  border-radius: 50%;
+  width: 100%;
+  aspect-ratio: 1;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.92);
+}
+
+.btnNumber {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.btnNumber:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.btnFunction {
+  background: rgba(255, 255, 255, 0.3);
+  color: #1a1a2e;
+}
+
+.btnFunction:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.btnOperator {
+  background: #f4a200;
+  color: #ffffff;
+}
+
+.btnOperator:hover {
+  background: #ffbe33;
+}
+
+.btnOperatorActive {
+  background: #ffffff;
+  color: #f4a200;
+}
+
+.btnEquals {
+  background: #f4a200;
+  color: #ffffff;
+}
+
+.btnEquals:hover {
+  background: #ffbe33;
+}
+
+.btnZero {
+  border-radius: 40px;
+  grid-column: span 2;
+  aspect-ratio: auto;
+  padding: 0 28px;
+  justify-content: flex-start;
+  height: 64px;
+}
+
+.historyToggle {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.historyToggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.historyPanel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 24px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.historyTitle {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.historyEmpty {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.historyList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.historyItem {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.historyExpr {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.historyResult {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.historyDate {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+}
+
+@media (max-width: 400px) {
+  .calculatorCard,
+  .historyPanel {
+    border-radius: 16px;
+    padding: 16px;
+  }
+
+  .result {
+    font-size: 36px;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+}

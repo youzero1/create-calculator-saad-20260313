@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Calculator App',
-  description: 'A fullstack calculator with history',
+  description: 'A simple calculator built with Next.js',
 };
 
 export default function RootLayout({
